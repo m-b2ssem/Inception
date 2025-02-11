@@ -14,6 +14,6 @@ RUN mkdir -p /run/php/
 
 COPY ./tools/entrypoint.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/entrypoint.sh
-ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
+ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]  
 
 CMD ["/usr/sbin/php-fpm7.4", "-F"]
