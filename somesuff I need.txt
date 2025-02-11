@@ -1,0 +1,17 @@
+this is how to text the cach 
+
+docker exec -it redis redis-cli
+
+PING
+
+it should returrn PONG
+
+
+set caching:
+SET testkey "Hello Redis"
+
+Retrieve the key:docker ps
+GET testkey
+
+
+
