@@ -1,17 +1,17 @@
 #!/usr/bin/env bash
 
-if [ !-d "/home/bassem/data" ]; then
-	mkdir -p /home/bassem/data
+if [ ! -d "/home/bmahdi/data" ]; then
+	mkdir -p /home/bmahdi/data
 fi
 
-if [ ! -d "/home/bassem/data/wp" ]; then
-	mkdir -p /home/bassem/data/wp
+if [ ! -d "/home/bmahdi/data/wp" ]; then
+	mkdir -p /home/bmahdi/data/wp
 fi
 
-if [ ! -d "/home/bassem/data/db" ]; then
-	mkdir -p /home/bassem/data/db
+if [ ! -d "/home/bmahdi/data/db" ]; then
+	mkdir -p /home/bmahdi/data/db
 fi
 
-if [ ! -d "/home/bassem/data/redis" ]; then
-	mkdir -p /home/bassem/data/redis
+if [ ! -d "/home/bmahdi/data/redis" ]; then
+	mkdir -p /home/bmahdi/data/redis
 fi
