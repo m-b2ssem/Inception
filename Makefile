@@ -9,22 +9,22 @@ init:
 
 up : init
 	@echo "Building..."
-	@docker-compose -f ./srcs/docker-compose.yml up -d --build
+	@docker compose -f ./srcs/docker-compose.yml up -d --build
 	@echo "Done."
 
 down :
 	@echo "Removing..."
-	@docker-compose -f ./srcs/docker-compose.yml down
+	@docker compose -f ./srcs/docker-compose.yml down
 	@echo "Done."
 
 status :
 	@echo "Status..."
-	@docker-compose -f ./srcs/docker-compose.yml ps
+	@docker compose -f ./srcs/docker-compose.yml ps
 	@echo "Done."
 
 clean: down
 	# Remove containers/images/volumes if desired
-	@docker-compose -f ./srcs/docker-compose.yml rm -fsv
+	@docker compose -f ./srcs/docker-compose.yml rm -fsv
 	@docker volume prune -f
 	@docker network prune -f
 
