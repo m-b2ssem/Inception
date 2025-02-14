@@ -4,6 +4,11 @@ MYSQL_PASSWORD=$(cat /run/secrets/db_password)
 WP_ADMIN_PASSWORD=$(cat /run/secrets/wp_admin_password)
 WP_USER_PASSWORD=$(cat /run/secrets/wp_user_password)
 
+if ! mysql -hmariadb -u$MYSQL_USER -p$MYSQL_PASSWORD -e "USE $MYSQL_DATABASE"; then
+	echo "Database does not exist, creating it"
+	exit 1;
+fi
+
 
 
 if [ -f "/var/www/html/wp-config.php" ]; then
