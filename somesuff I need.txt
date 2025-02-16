@@ -15,3 +15,4 @@ GET testkey
 
 
 
+docker exec -it redis redis-cli monitor

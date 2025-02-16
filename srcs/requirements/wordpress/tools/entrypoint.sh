@@ -51,5 +51,8 @@ wp user create      $WP_USER_USERNAME $WP_USER_EMAIL \
                     --role=subscriber \
                     --allow-root
 
+wp config set WP_REDIS_HOST redis --allow-root
+wp config set WP_REDIS_PORT 6379 --allow-root
+wp config set WP_CACHE true --allow-root
 
 exec "$@"
